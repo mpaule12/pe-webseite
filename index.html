@@ -156,7 +156,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
         }
 
@@ -269,6 +269,38 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .logo {
+                width: 100%;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                padding: 0.5rem 0;
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                padding: 4rem 0;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -281,13 +313,29 @@
                 grid-template-columns: 1fr;
             }
 
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
+            .about-photo {
+                max-width: 100%;
+                margin-bottom: 1.5rem;
             }
 
-            .nav-links a {
-                display: none;
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-item {
+                padding: 1.25rem;
+            }
+
+            .service-card[style*="grid-column"] {
+                grid-column: auto !important;
             }
         }
     </style>
