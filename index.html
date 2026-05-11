@@ -175,8 +175,19 @@
         }
 
         .service-icon {
-            font-size: 3rem;
             margin-bottom: 1rem;
+        }
+
+        .service-icon img {
+            width: 250px;
+            height: auto;
+            display: inline-block;
+            border-radius: 50%;
+            mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            mask-mode: alpha;
+            -webkit-mask-mode: alpha;
+            filter: drop-shadow(0 0 20px rgba(0,0,0,0.08));
         }
 
         .service-card .service-list {
@@ -397,7 +408,7 @@
             <h2>Leistungen</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">👥</div>
+                    <div class="service-icon"><img src="management.png" alt="Management"></div>
                     <h3>Management & Organisation</h3>
                     <p class="service-subtitle">RUN THE BUSINESS</p>
                     <div class="service-list">
@@ -407,7 +418,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💼</div>
+                    <div class="service-icon"><img src="beratung.png" alt="Beratung"></div>
                     <h3>Beratung & Unterstützung</h3>
                     <p class="service-subtitle">CHANGE THE BUSINESS</p>
                     <div class="service-list">                        
@@ -417,7 +428,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">👑</div>
+                    <div class="service-icon"><img src="leadership.png" alt="Leadership"></div>
                     <h3>Leadership & Führung</h3>
                     <p class="service-subtitle">GIVE SENSE</p>
                     <div class="service-list">
@@ -427,7 +438,7 @@
                     </div>
                 </div>
                 <div class="service-card" style="grid-column: 2;">
-                    <div class="service-icon">💡</div>
+                    <div class="service-icon"><img src="innovation.png" alt="Innovation"></div>
                     <h3>Innovation & Lösungen</h3>
                     <p class="service-subtitle">ADVANCED TECHNOLOGY DEVELOPMENT</p>
                     <div class="service-list">
