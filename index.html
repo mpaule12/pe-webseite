@@ -19,7 +19,7 @@
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7f 100%);
+            background: #b9b6b6;
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -41,9 +41,22 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
             font-weight: bold;
             letter-spacing: 1px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .logo span {
+            display: inline-block;
         }
 
         .nav-links {
@@ -80,6 +93,7 @@
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.95;
+            font-style: italic;
         }
 
         .cta-button {
@@ -111,6 +125,16 @@
             color: #1a3a52;
         }
 
+        .about-photo {
+            display: block;
+            margin: 0 auto 2rem auto;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -132,7 +156,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
@@ -169,6 +193,13 @@
         .service-card h3 {
             color: #1a3a52;
             margin-bottom: 1rem;
+        }
+
+        .service-subtitle {
+            font-style: italic;
+            color: #2d5f7f;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
         /* Contact Section */
@@ -212,6 +243,30 @@
             margin-top: 4rem;
         }
 
+        /* Impressum */
+        .impressum {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .impressum h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #3b9e99;
+        }
+
+        .impressum-content h3 {
+            color: #1a3a52;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .impressum-content p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
@@ -242,7 +297,10 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">🔧 paule engineering</div>
+                <div class="logo">
+                    <img src="Logo.png" alt="paule engineering Logo">
+                    <span style="color: #2d5f7f;">paule engineering</span>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#about">Über mich</a></li>
                     <li><a href="#services">Leistungen</a></li>
@@ -256,7 +314,7 @@
     <section class="hero">
         <div class="container">
             <h1>paule engineering</h1>
-            <p>RUN THE BUSINESS | CHANGE THE BUSINESS | GIVE SENSE</p>
+            <p>PASSION & PERFORMANCE</p>
             <a href="#contact" class="cta-button">Jetzt Kontakt aufnehmen</a>
         </div>
     </section>
@@ -265,14 +323,21 @@
     <section id="about" class="about">
         <div class="container">
             <h2>Über mich</h2>
+            <img src="foto.jpg" alt="Foto von mir" class="about-photo">
             <div class="about-content">
                 <div>
                     <h3 style="color: #1a3a52; margin-bottom: 1rem;">Expertise & Erfahrung</h3>
-                    <p>paule engineering ist Ihr zuverlässiger Partner für professionelle Lösungen. Mit langjähriger Erfahrung und Fachkompetenz unterstützen wir Sie bei komplexen Projekten und technischen Herausforderungen.</p>
+                    <p><strong>30 Jahre Technologieentwicklung - von der Idee bis zur Serie.</strong><br>
+                        Als Ingenieur und Manager mit langjähriger Erfahrung in der Automobilindustrie begleite ich 
+                        in der Entwicklung und Industrialisierung komplexer Projekte und technischen Herausforderungen. 
+                        Ich bin der zuverlässige Partner für professionelle Lösungen.</p>
                 </div>
                 <div>
-                    <h3 style="color: #1a3a52; margin-bottom: 1rem;">Unser Anspruch</h3>
-                    <p>Wir bieten maßgeschneiderte Lösungen, die perfekt zu Ihren Anforderungen passen. Qualität, Zuverlässigkeit und Kundenzufriedenheit stehen an erster Stelle unserer Arbeit.</p>
+                    <h3 style="color: #1a3a52; margin-bottom: 1rem;">Mein Anspruch</h3>
+                    <p><strong>Technologie bewegt die Welt - und ich bewege Projekte. </strong><br>    
+                        Ich biete maßgeschneiderte Lösungen, die perfekt den Anforderungen passen und begleite als verlässlicher Partner
+                         auf dem Weg vom Konzept zur Marktreife. Qualität, Zuverlässigkeit und 
+                         Kundenzufriedenheit stehen an erster Stelle meiner Arbeit.</p>
                 </div>
             </div>
         </div>
@@ -281,35 +346,49 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Unsere Leistungen</h2>
+            <h2>Leistungen</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">👥</div>
-                    <h3>Management</h3>
+                    <h3>Management & Organisation</h3>
+                    <p class="service-subtitle">RUN THE BUSINESS</p>
                     <div class="service-list">
                         <p>Projektmanagement</p>
                         <p>Interimsmanagement</p>
-                        <p>Startup Management</p>
+                        <p>Kooperations- und Lieferantenmanagement</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💼</div>
-                    <h3>Beratung</h3>
-                    <div class="service-list">
-                        <p>Prozesse</p>
-                        <p>Strategien</p>
-                        <p>Coaching</p>
+                    <h3>Beratung & Unterstützung</h3>
+                    <p class="service-subtitle">CHANGE THE BUSINESS</p>
+                    <div class="service-list">                        
+                        <p>Strategieentwicklung</p>
+                        <p>Prozessgestaltung</p>
+                        <p>Transformation</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Lösungen</h3>
+                    <div class="service-icon">👑</div>
+                    <h3>Leadership & Führung</h3>
+                    <p class="service-subtitle">GIVE SENSE</p>
                     <div class="service-list">
-                        <p>Konzepte</p>
-                        <p>Technologien</p>
-                        <p>Innovationen</p>
+                        <p>Mitarbeiterzufriedenheit</p>
+                        <p>Kundenorientierung</p>
+                        <p>Partnervertrauen</p>
                     </div>
                 </div>
+                <div class="service-card" style="grid-column: 2;">
+                    <div class="service-icon">🔧</div>
+                    <h3>Innovation & Lösungen</h3>
+                    <p class="service-subtitle">ADVANCED TECHNOLOGY DEVELOPMENT</p>
+                    <div class="service-list">
+                        <p>Funktionalitätsreifegrad</p>
+                        <p>Terminzielerreichung</p>
+                        <p>Kostenrahmeneinhaltung</p>
+                        <p>Qualitätsicherstellung</p>
+                        </div>
+                </div>                
             </div>
         </div>
     </section>
@@ -318,7 +397,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Kontakt</h2>
-            <p>Haben Sie ein Projekt oder eine Frage? Ich freue mich auf Ihre Nachricht!</p>
+            <p>Haben Sie ein Projekt oder eine Frage? Ich freue mich auf Ihre Nachricht!</p> <br>
+            <p style="font-size: 1.2rem; color: #47866e;">Markus Paule</p>          
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>📞 Telefon</h3>
@@ -340,8 +420,46 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 paule engineering. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2026 paule engineering. Alle Rechte vorbehalten. | <a href="#impressum" style="color: rgb(58, 207, 207);">Impressum</a></p>
         </div>
     </footer>
+
+    <!-- Impressum -->
+    <section id="impressum" class="impressum">
+        <div class="container">
+            <h2>Impressum</h2>
+            <div class="impressum-content">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p><strong>paule engineering</strong><br>
+                Markus Paule<br>
+                Matreier Str. 10<br>
+                D 71404 Korb<br>
+                <br>Ust.-Id Nr.: DE 430 060 955<br> </p>
+
+                <h3>Kontakt</h3>
+                <p>Telefon: +49 (0) 155 60437983<br>
+                E-Mail: engineering@paule-mail.de</p>
+
+                <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+                <p>paule engineering<br>
+                Matreier Str. 10<br>
+                71404 Korb</p>
+
+                <h3>Urheberrecht</h3>
+                <p>Alle Texte, Bilder, Grafiken, Ton-, Video- oder sonstige Bilddarstellungen und deren Anordnung 
+                    auf den Seiten unterliegen dem Schutz des Urheberrechts und anderer Schutzgesetze. 
+                    Ohne meine ausdrückliche Zustimmung dürfen Inhalte dieser Websites nicht zu kommerziellen Zwecken 
+                    kopiert, verbreitet, verändert oder Dritten zugänglich gemacht werden. 
+                    Ich weise darauf hin, dass auf den Websites enthaltene Bilder dem Urheberrecht Dritter 
+                    unterliegen können.</p>
+
+                <h3>Haftungsausschluss</h3>
+                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. 
+                    Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+                Jegliche Haftung für Schäden, die direkt oder indirekt aus der Benutzung dieser Websites entstehen, wird ausgeschlossen, 
+                soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
